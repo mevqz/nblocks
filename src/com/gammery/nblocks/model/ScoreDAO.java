@@ -77,17 +77,20 @@ public class ScoreDAO
 
 		if (true) return true;
 
-		if (score.getRank() == 0)
+		if (score.getRank() == 0) {
 			setRankingPosition(score);
-		if (score.getRank() < 0)
+		}
+		if (score.getRank() < 0) {
 			return false;
+		}
 
 		int recordNumber = -1;
 		//int position = -1;	// file offset
 		GameModeType gameMode = score.getGameModeType();
 		if (getHighestScores(gameMode).size() == RANKING_SLOTS) {
 			Score outOfRank = getHighestScores(gameMode).get(RANKING_SLOTS - 1); // OR getLowestScore();
-			System.out.println("OUT OF RANK>>> " + "s.name: " + outOfRank.getPlayerName() + " score: " + outOfRank.getScore() + " lines: " + outOfRank.getLinesCleared());
+			System.out.println("OUT OF RANK>>> " + "s.name: " + outOfRank.getPlayerName() 
+				+ " score: " + outOfRank.getScore() + " lines: " + outOfRank.getLinesCleared());
 			recordNumber = getRecordNumber(outOfRank);
 			//position = getRecordPosition(outOfRank);//getScorePosition(outOfRank);
 		}
@@ -370,11 +373,12 @@ public class ScoreDAO
 			System.out.println("LENGTH > 0");
 			Score s = generate();
 			System.out.println("s.name: " + s.getPlayerName() + " score: " + s.getScore() + " lines: " + s.getLinesCleared());
-			if (trySave(s))
+			if (trySave(s)) {
 				System.out.println("Score saved!");
-			else
+			} else {
 				System.out.println("Not saved:" + s.getRank());
-		}
+			}
+	}
 
 		//List<Score> all = getHighestScores(GameModeType.SPRINT);
 		List<Score> all = getAllScores();

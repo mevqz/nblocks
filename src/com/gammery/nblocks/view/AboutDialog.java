@@ -125,17 +125,6 @@ public class AboutDialog
 		}
 	}
 
-	private static String licenseDescription = 
-		"Quadrapassel es software libre; puede redistribuirlo y/o modificarlo bajo " 
-		+ "los términos de la Licencia Pública General GNU tal como la publica la "
-		+ "Free Software Foundation; ya sea en la versión 2 de la Licencia, como "
-		+ "(a su elección) cualquier otra versión posterior.\n\n"
-		+ "Quadrapassel se distribuye con el ánimo de que le será útil, pero SIN "
-		+ "NINGUNA GARANTÍA; sin incluso la garantía implícita de MERCANTILIDAD "
-		+ "o IDONEIDAD PARA UN PROPÓSITO DETERMINADO. Vea la Licencia Pública General "
-		+ "de GNU para más detalles.\n\n"
-		+ "Debería haber recibido una copia de la Licencia Pública General GNU junto "
-		+ "con Quadrapassel; si no, escriba a la Free Software Foundation, Inc., 51 "
-		+ "Franklin Street, Fifth Floor, Boston, MA 02110-1301 EE. UU.\n";
+	private static String licenseDescription = "{Placeholder for license description}";
 
 }

@@ -42,7 +42,7 @@ public class NextPiecesPanel extends JPanel
 	public static final int MAX_PANELS = 5;
 
 	public NextPiecesPanel() {
-		this(Color.BLACK, MAX_PANELS, 120, 120);
+		this(Color.BLACK, MAX_PANELS, 144, 144);
 	}
 
 	//TODO Podria recibir un Color[] para usar distintos colores para cada frame
